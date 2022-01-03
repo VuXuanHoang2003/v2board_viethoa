@@ -12,7 +12,6 @@ class Coupon extends Model
     protected $casts = [
         'created_at' => 'timestamp',
         'updated_at' => 'timestamp',
-        'limit_plan_ids' => 'array',
-        'limit_period' => 'array'
+        'limit_plan_ids' => 'array'
     ];
 }

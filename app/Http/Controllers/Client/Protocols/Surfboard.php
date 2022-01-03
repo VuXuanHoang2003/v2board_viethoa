@@ -67,11 +67,12 @@ class Surfboard
     public static function buildShadowsocks($password, $server)
     {
         $config = [
-            "{$server['name']}=ss",
+            "{$server['name']}=custom",
             "{$server['host']}",
             "{$server['port']}",
-            "encrypt-method={$server['cipher']}",
-            "password={$password}",
+            "{$server['cipher']}",
+            "{$password}",
+            'https://raw.githubusercontent.com/Hackl0us/proxy-tool-backup/master/SSEncrypt.module',
             'tfo=true',
             'udp-relay=true'
         ];

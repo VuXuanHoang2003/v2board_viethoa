@@ -15,7 +15,7 @@ class OrderSave extends FormRequest
     {
         return [
             'plan_id' => 'required',
-            'period' => 'required|in:month_price,quarter_price,half_year_price,year_price,two_year_price,three_year_price,onetime_price,reset_price'
+            'cycle' => 'required|in:month_price,quarter_price,half_year_price,year_price,two_year_price,three_year_price,onetime_price,reset_price'
         ];
     }
 
@@ -23,8 +23,8 @@ class OrderSave extends FormRequest
     {
         return [
             'plan_id.required' => __('Plan ID cannot be empty'),
-            'period.required' => __('Plan period cannot be empty'),
-            'period.in' => __('Wrong plan period')
+            'cycle.required' => __('Plan cycle cannot be empty'),
+            'cycle.in' => __('Wrong plan cycle')
         ];
     }
 }

@@ -64,12 +64,12 @@ class ResetTraffic extends Command
                     break;
                 }
                 case 0: {
-                    $builder = with(clone($this->builder))->where('plan_id', $plan->id);
+                    $builder = $this->builder->where('plan_id', $plan->id);
                     $this->resetByMonthFirstDay($builder);
                     break;
                 }
                 case 1: {
-                    $builder = with(clone($this->builder))->where('plan_id', $plan->id);
+                    $builder = $this->builder->where('plan_id', $plan->id);
                     $this->resetByExpireDay($builder);
                     break;
                 }
